@@ -200,7 +200,7 @@ body {
 
 /* ── MAIN ── */
 .main { margin-left: 260px; flex: 1; min-width: 0; }
-.content { padding: 56px 60px 120px; max-width: 660px; }
+.content { padding: 56px 60px 120px; max-width: 960px; }
 
 .part-panel { display: none; }
 .part-panel.active { display: block; animation: fadeUp .3s ease; }
@@ -630,6 +630,8 @@ const PARTS=[
      {b:"Be specific in your prompt:",t:"Include what the app does, who uses it, required features, and what NOT to do."},
      {b:"Example prompt:",t:"'Build a progress tracker for a 10-week internship with checkboxes, a notes field per part, a progress bar, and a clean professional look. No login. Free to deploy.'"},
      {b:"Iterate with follow-ups:",t:"First output won't be perfect. Use follow-up prompts as revision instructions: 'Make the progress bar bigger', 'Change to a blue colour scheme'."},
+     {b:"Think about perspective first:",t:"Before describing what you want, tell the AI who it's speaking as. A prompt that opens with \"You are an intern at an AI startup, wanting to impress your colleagues and boss with a solid first impression\" will produce sharper, more contextually aware output than one that jumps straight to the task."},
+     {b:"Let AI write your prompts:",t:"If you're not sure how to phrase something, ask Claude to help. Try: \"Write me a prompt I can use to ask you to build a personal progress tracker for a 10-week internship program. Make it specific and well-structured.\" Then use that prompt as your starting point."},
      {b:"No credits needed:",t:"Free tiers on Claude and Lovable are sufficient. We want to see that you can implement an AI component — a live, API-connected AI is not required, as running one costs credits."},
    ],
    advanced:[
@@ -962,13 +964,13 @@ function rerenderPart(pid){
         <div>
           <div class="brief-col-title">Tips</div>
           <div class="tip-list">
-            ${p.tips.map((t,i)=>`<div class="tip-item"><span class="tip-n">${i+1}.</span><span><strong>${t.b}</strong> ${t.t}</span></div>`).join('')}
+            ${p.tips.map((t,i)=>`<div class="tip-item"><span class="tip-n">·</span><span><strong>${t.b}</strong> ${t.t}</span></div>`).join('')}
           </div>
         </div>
         <div>
           <div class="brief-col-title">If you want to go further</div>
           <div class="adv-list">
-            ${p.advanced.map((a,i)=>`<div class="adv-item"><span class="adv-n">${i+1}.</span><span><strong>${a.b}</strong> ${a.t}</span></div>`).join('')}
+            ${p.advanced.map((a,i)=>`<div class="adv-item"><span class="adv-n">·</span><span><strong>${a.b}</strong> ${a.t}</span></div>`).join('')}
           </div>
         </div>
       </div>
