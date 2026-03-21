@@ -648,7 +648,7 @@ const PARTS=[
    reflects:[
      "How did your prompts change between your first attempt and your final result? What did you learn about communicating with AI more precisely?",
      "Where did the AI help you move faster than expected — and where did you have to take back control?",
-   ]},
+   ],form:"https://forms.gle/knXRu7z6ddYzCSKe7"},
 
   {id:1,num:"02",title:"The Model Mapping Project",tagline:"Build Your Personal AI Topography",
    deliverable:"Model Topography Sheet + \"AI Tools Decision Matrix\" document.",
@@ -657,27 +657,27 @@ const PARTS=[
    doneWhen:"You can answer \"which tool for what?\" in 30 seconds without hesitation.",
    why:"Most people default to one AI model for everything, leaving capability on the table. This isn't about which model is objectively best — it's building your own instincts for which brain works for which task.",
    tips:[
-     {b:"Use consistent test prompts:",t:"Run the exact same task through each model so comparisons are fair."},
+     {b:"Use consistent test prompts:",t:"Run the exact same prompt through each model so the comparisons are fair. Make sure to use prompts that follow prompt engineering guidelines, such as describing the perspective the AI should take and being specific about the format you want the answer in. Remember, you can use the AI itself to help you generate an even stronger set of prompts!"},
      {b:"Test these categories:",t:"Deep Research, Writing, Strategy, Data Analysis, Visual reasoning."},
-     {b:"Don't rush the matrix:",t:"Take time to sit with the results before writing your AI tools decision matrix."},
-     {b:"Think about editing time:",t:"Which model's output required the least fixing? That's often the real winner."},
+     {b:"Don't rush the matrix:",t:"Take time to contemplate the results before writing your AI tools decision matrix."},
+     {b:"Think about editing time:",t:"Which model's output required the least adjusting? That's often the real winner."},
      {b:"The AI Model Map:",t:"<a href='https://aidbmodelmap.com/' target='_blank' rel='noopener noreferrer' style='color:var(--accent)'>aidbmodelmap.com</a> is a great reference to help you compare models and build your decision matrix."},
    ],
    advanced:[
-     {b:"Test",t:"specialised tools like Perplexity alongside the big three."},
+     {b:"Test",t:"specialised tools like Perplexity alongside the big three. If you have tried them all, use your favorite and see how it holds up against the others!"},
      {b:"Expand",t:"matrix to include cost and context window comparisons."},
-     {b:"Track",t:"output consistency — same prompt, same model, different days."},
+     {b:"Track",t:"output consistency: same prompt, same model, different days."},
    ],
    tasks:[
      {b:"Pick 2–3 models",t:"and run the same task through each."},
      {b:"Compare",t:"across: speed, accuracy, tone, and how much editing was needed."},
-     {b:"Build your matrix",t:"— strengths, weaknesses, best use case per model."},
+     {b:"Build your matrix",t:" strengths, weaknesses, best use case per model."},
      {b:"Write a one-page document that ",t:"you'll actually refer back to about which model is best for which use case."},
    ],
    reflects:[
      "Which model surprised you most — positively or negatively? What did that reveal about what you expected from AI?",
      "Is your matrix something you'll actually consult in 3 months, or will you default to habit? What would make it stick?",
-   ]},
+   ],form:"https://forms.gle/JKoq3gxko8wWXWmC9"},
 
   {id:2,num:"03",title:"The Deep Research Sprint",tagline:"Let AI Do a Week's Research in an Afternoon",
    deliverable:"2-page research brief on a MyAiPathways-relevant topic, presented with an AI deck tool.",
@@ -989,7 +989,7 @@ function rerenderPart(pid){
     </div>
 
     <div class="sec-lbl">Reflect</div>
-    <p style="margin:0 0 16px;font-size:14px;">Please answer the reflection questions using <a href="https://forms.gle/knXRu7z6ddYzCSKe7" target="_blank" rel="noopener noreferrer">this Google Form</a>.</p>
+    <p style="margin:0 0 16px;font-size:14px;">Please answer the reflection questions using <a href="${p.form}" target="_blank" rel="noopener noreferrer">this Google Form</a>.</p>
     <div class="reflect-list">
       ${p.reflects.map((r,i)=>`
       <div class="reflect-item">
