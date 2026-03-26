@@ -917,7 +917,7 @@ function pDone(part){return part.tasks.filter((_,i)=>S.t[tk(part.id,i)]).length;
 function isDone(part){return pDone(part)===part.tasks.length;}
 
 function buildNav(){
-  document.getElementById('navList').innerHTML=PARTS.slice(0,4).map((p,i)=>
+  document.getElementById('navList').innerHTML=PARTS.slice(0,5).map((p,i)=>
     `<button class="nav-item ${i===0?'active':''} ${isDone(p)?'done':''}" id="nav-${p.id}" onclick="showPart(${p.id})">
       <span class="nav-num">${p.num}</span>
       <span class="nav-name">${p.title}</span>
