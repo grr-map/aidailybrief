@@ -768,7 +768,7 @@ const PARTS=[
   {id:4,num:"05",title:"The Information Pipeline",tagline:"Build Your NotebookLM + Gamma-esque Stack and Workflow",
    deliverable:"Reusable workflow: Summary + FAQ + Deck from one input source.",
    tools:"LLM of your choosing (ie. Claude, Gemini), NotebookLM, Gamma. You can also use your own equivalents to these tools if you prefer.",
-   duration:"1 day",
+   duration:"1 week", // reassess
    doneWhen:"You can hypothetically brief someone on the material in under 5 minutes using your deck.",
    why:"NotebookLM, Gamma, and the like are criminally underused. Most people try them once and forget. This part helps to build them into your actual workflow so you can turn raw information into polished outputs consistently, and realize the capabilities these tools have to elevate your work.",
    tips:[
@@ -797,7 +797,7 @@ const PARTS=[
   {id:5,num:"06",title:"The First Automation",tagline:"Build Your Content Distribution Machine",
    deliverable:"One working automation + a \"How It Works\" doc.",
    tools:"Lindy, n8n, Make, or native Slack/Notion workflows.",
-   duration:"1 week",
+   duration:"1 week", // reassess deadline
    doneWhen:"You've run it twice, it saved time, and you can explain it to someone else.",
    why:"This is where leverage starts compounding. One automation saving 30 minutes per content piece × 50 pieces per year is massive. Most avoid it because it feels complex — but today you build one that actually works.",
    tips:[
@@ -824,15 +824,16 @@ const PARTS=[
 
   {id:6,num:"07",title:"The Second Automation",tagline:"Build Your Productivity Workflow",
    deliverable:"One working productivity automation + a follow-up dashboard or tracker.",
-   tools:"Lindy, n8n, Make, or Zapier.",
-   duration:"1 week",
+   tools:"Lindy, n8n, Make, or Zapier.", // is this list exhaustive
+   duration:"1 week", // maybe should extend the deadline or release this individually
    doneWhen:"Follow-ups are created automatically, you trust it, and open items are tracked.",
    why:"Part 7 was about creating output; this is about managing input. Two automations creates a minimum viable stack — the systems that keep things from falling through the cracks.",
    tips:[
      {b:"Pick one focused use case:",t:"Inbox → Follow-up, Lead → Response, or Meeting Prep Bot. Don't try to do all three."},
      {b:"Default build:",t:"Prep Bot — Calendar event → LinkedIn lookup + history → briefing 30 min before."},
      {b:"The tracker matters:",t:"Without a dashboard of open items, the automation loses half its value."},
-     {b:"Compare to Part 7:",t:"Which felt more impactful — managing output or managing input?"},
+     {b:"Two is better than one:",t:"Look at this assignment in conjunction from the previous one. What have you learned? How can they work together? Smart AI practice also dictates that you shouldn't put all of your eggs in one basket -- don't rely on solely one workflow to automate your entire life."},
+     {b:"Compare to Part 6:",t:"Which felt more impactful — managing output or managing input?"}, // is it part 6? double check
    ],
    advanced:[
      {b:"Add",t:"a feedback loop to rate output quality."},
@@ -849,6 +850,8 @@ const PARTS=[
      "Which felt more impactful to automate — content output (Part 7) or input management (Part 8)? What does that tell you about where your time is actually going?",
      "Does this feel like infrastructure now, or still like an add-on?",
    ]},
+
+   // really look into this one on the website; seems really important / can tie into social media nicely. review and assess granularly
 
   {id:7,num:"08",title:"The Context Engineering Project",tagline:"Build Your Personal AI Operating System",
    deliverable:"Structured personal context system + a Professional Context Document for pasting.",
