@@ -812,14 +812,15 @@ const PARTS=[
      {b:"Add",t:"error handling so failures don't go silent."},
    ],
    tasks:[
-     {b:"Pick your tool",t:"— Lindy, n8n, Make, or Slack/Notion native."},
+     {b:"Pick your tool",t:"— Lindy, n8n, Make, Slack/Notion native, or another of your choosing."},
      {b:"Build the automation",t:"— Trigger → Transform → Route → Approval → Logging."},
      {b:"Run it twice",t:"and fix whatever breaks."},
-     {b:"Write the How It Works doc",t:"in plain language."},
+     {b:"Write the How It Works doc",t:"in plain language (you can, and <strong>should</strong>, use AI to write this!)."},
    ],
    reflects:[
      "What broke first — and what did debugging teach you that just using the tools never would have?",
      "Where did you feel comfortable handing off control — and where did you want to stay in the loop?",
+     "How do you think about the value of this automation now that it's built and running? Do you see it as infrastructure, or still an add-on? What would it take for you to build another one?",
    ]},
 
   {id:6,num:"07",title:"The Second Automation",tagline:"Build Your Productivity Workflow",
@@ -919,7 +920,7 @@ function pDone(part){return part.tasks.filter((_,i)=>S.t[tk(part.id,i)]).length;
 function isDone(part){return pDone(part)===part.tasks.length;}
 
 function buildNav(){
-  document.getElementById('navList').innerHTML=PARTS.slice(0,5).map((p,i)=>
+  document.getElementById('navList').innerHTML=PARTS.slice(0,6).map((p,i)=>
     `<button class="nav-item ${i===0?'active':''} ${isDone(p)?'done':''}" id="nav-${p.id}" onclick="showPart(${p.id})">
       <span class="nav-num">${p.num}</span>
       <span class="nav-name">${p.title}</span>
